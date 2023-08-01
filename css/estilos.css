@@ -1,0 +1,547 @@
+/*varaibles*/ /*Fuentes locales*/
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Geologica:wght@400;700&family=Poppins:wght@200&display=swap");
+@font-face {
+  font-family: "CaviarDreams";
+  src: url("../fonts/CaviarDreams.ttf");
+}
+/*Fuentes via cdn*/
+/*Estilos del header*/
+header {
+  background-color: #071952;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+#titulo {
+  font-size: 30px;
+  margin: 10px;
+  font-weight: bold;
+  padding-top: 15px;
+}
+
+.redes-sociales {
+  display: flex;
+  align-items: center;
+}
+
+.redes-sociales a {
+  margin-right: 10px;
+}
+
+@media (max-width: 700px) {
+  header {
+    background-color: #071952;
+    padding: 10px;
+    display: grid;
+    justify-content: space-between;
+  }
+}
+/*Estilos del footer*/
+footer {
+  display: grid;
+  background-color: #025464;
+  padding: 10px;
+  text-align: center;
+  bottom: 0;
+  grid-template-areas: "menu mision return";
+}
+
+footer p {
+  font-family: "CaviarDreams";
+  color: white;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-menu {
+  grid-area: menu;
+  display: flex;
+  flex-direction: column;
+  font-family: "CaviarDreams";
+}
+
+.footer-mision {
+  grid-area: mision;
+  display: flex;
+}
+
+.footer-mision p {
+  margin: 5px;
+}
+
+.footer-subir {
+  grid-area: return;
+}
+
+/*Estilos de la navegacion*/
+nav {
+  background-color: #0B666A;
+}
+
+#navbarSupportedContent ul li a {
+  color: white;
+}
+
+/*Estilos de formularios */
+.formularioContacto {
+  display: grid;
+  font-style: normal;
+  font-family: "CaviarDreams";
+  justify-content: center;
+  grid-area: formulario;
+  width: 80%;
+}
+.formularioContacto #formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.formularioContacto #formulario #formularioCelda input {
+  border-radius: 5%;
+}
+.formularioContacto #btnEnviar {
+  text-align: center;
+}
+
+/*Estilos del Index*/
+#ContenidoPrincipal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+#ContenidoPrincipal .contenidoInferior {
+  width: 70%;
+  display: grid;
+  grid-template-areas: "noticia aside";
+}
+#ContenidoPrincipal .contenidoInferior .blog-noticia1 {
+  margin-bottom: 20px;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #071952), url(../img/fondo.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  height: 48%;
+  font-family: "Cairo";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s;
+}
+#ContenidoPrincipal .contenidoInferior .blog-noticia1 h2 {
+  color: white;
+}
+#ContenidoPrincipal .contenidoInferior .blog-noticia1 h4 {
+  color: white;
+}
+#ContenidoPrincipal .contenidoInferior .blog-noticia1 p {
+  color: white;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+#ContenidoPrincipal .contenidoInferior .blog-noticia1 p a {
+  text-decoration: none;
+  color: white;
+}
+#ContenidoPrincipal .contenidoInferior .blog-noticia1:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+#ContenidoPrincipal .contenidoInferior .blog-noticia2 {
+  margin-bottom: 20px;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #071952), url(../img/servicio2.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  height: 48%;
+  font-family: "Cairo";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s;
+}
+#ContenidoPrincipal .contenidoInferior .blog-noticia2 h2 {
+  color: white;
+}
+#ContenidoPrincipal .contenidoInferior .blog-noticia2 h4 {
+  color: white;
+}
+#ContenidoPrincipal .contenidoInferior .blog-noticia2 p {
+  color: white;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+#ContenidoPrincipal .contenidoInferior .blog-noticia2 p a {
+  text-decoration: none;
+  color: white;
+}
+#ContenidoPrincipal .contenidoInferior .blog-noticia2:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+#ContenidoPrincipal #resumenNoticias {
+  grid-area: aside;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #071952), url(../img/personal.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  padding-left: 15px;
+  margin-left: 15px;
+  font-family: "Cairo";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s;
+}
+#ContenidoPrincipal #resumenNoticias h2 {
+  color: white;
+}
+#ContenidoPrincipal #resumenNoticias h4 {
+  color: white;
+}
+#ContenidoPrincipal #resumenNoticias p {
+  color: white;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+#ContenidoPrincipal #resumenNoticias p a {
+  text-decoration: none;
+  color: white;
+}
+#ContenidoPrincipal #resumenNoticias:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+#Carrusel {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+  grid-area: carrusel;
+}
+
+#carouselExampleCaptions {
+  width: 40%;
+}
+#carouselExampleCaptions h5 {
+  color: black;
+  font-weight: bold;
+  font-family: Geologica;
+}
+#carouselExampleCaptions p {
+  color: black;
+  font-weight: bold;
+  font-family: Geologica;
+}
+
+#imagen {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contenedor-noticia {
+  grid-area: noticia;
+}
+
+/*Estilos de la pagina de noticia*/
+.contenidoNoticias {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contenidoNoticias .contenedorNoticias {
+  width: 100%;
+  display: grid;
+  padding: 50px 0;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+.contenidoNoticias .contenedorNoticias .noticia {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(170, 170, 170);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-image: linear-gradient(#071952, #0d2a88);
+  flex-direction: column;
+  margin: 10px;
+  transition: transform 0.5s;
+}
+.contenidoNoticias .contenedorNoticias .noticia h2 {
+  font-family: "Franklin Gothic Medium";
+  color: white;
+}
+.contenidoNoticias .contenedorNoticias .noticia h4 {
+  font-family: "Poppins";
+  color: white;
+}
+.contenidoNoticias .contenedorNoticias .noticia p {
+  font-family: "Poppins";
+  color: white;
+}
+.contenidoNoticias .contenedorNoticias .noticia:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.contenidoNoticias #paginasNoticias {
+  display: grid;
+  justify-content: center;
+  font-family: "Poppins";
+}
+.contenidoNoticias #paginasNoticias ul.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+.contenidoNoticias #paginasNoticias li.page-item {
+  margin: 5px;
+}
+.contenidoNoticias #paginasNoticias a.page-link {
+  color: black;
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+  .contenidoNoticias .contenedorNoticias {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 700px) {
+  .contenidoNoticias .contenedorNoticias {
+    grid-template-columns: 1fr;
+  }
+  .contenidoNoticias ul.pagination {
+    flex-direction: column;
+  }
+  .contenidoNoticias li.page-item {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+/*Estilos de la pagina de contacto*/
+.contactoContenido {
+  display: grid;
+  justify-content: center;
+  grid-template-areas: "imagen formulario";
+  grid-template-columns: 1fr 2fr;
+}
+.contactoContenido .imagenContacto {
+  grid-area: imagen;
+  margin-top: 10%;
+}
+.contactoContenido #tituloContacto {
+  color: white;
+  font: bold;
+  text-align: center;
+  font-family: "CaviarDreams";
+}
+
+@media (max-width: 700px) {
+  .contactoContenido {
+    grid-template-areas: "formulario";
+    margin-left: 30%;
+  }
+  .contactoContenido .imagenContacto {
+    display: none;
+  }
+}
+/*Estilos de la pagina de servicios*/
+#cuerpoServicios {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  text-align: justify;
+}
+#cuerpoServicios .servicioImagenIzquierda {
+  padding: 20px;
+  display: grid;
+  grid-template-areas: "aside texto";
+  background-image: linear-gradient(#071952, #0d2a88);
+  border-radius: 10px;
+  color: white;
+  margin: 10px;
+}
+#cuerpoServicios .servicioImagenIzquierda aside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#cuerpoServicios .servicioImagenDerecha {
+  padding: 20px;
+  display: grid;
+  grid-template-areas: "texto aside";
+  background-image: linear-gradient(#071952, #0d2a88);
+  border-radius: 10px;
+  color: white;
+  margin: 10px;
+}
+#cuerpoServicios .servicioImagenDerecha aside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenidoServicio {
+  padding: 20px;
+  grid-area: texto;
+  font-family: "Cairo";
+}
+
+.imagenServicio {
+  grid-area: aside;
+}
+
+#contenidoNoticias {
+  display: flex;
+  flex-direction: column;
+}
+
+/*Estilos de la pagina Sobre Nosotros*/
+#contenidoSobreNosotros {
+  display: grid;
+  grid-area: contenido;
+}
+#contenidoSobreNosotros p {
+  font-family: "Cairo";
+}
+
+#sobreNosotros {
+  background-color: rgb(65, 65, 65);
+  border-radius: 10px;
+  display: grid;
+  grid-template-areas: "contenido aside" "organigrama organigrama";
+  margin: 30px;
+  text-align: justify;
+}
+#sobreNosotros aside {
+  background-color: transparent;
+}
+#sobreNosotros h2 {
+  margin: 10px;
+  color: white;
+  font: bold;
+}
+#sobreNosotros p {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+}
+
+#videoBienvenida {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+#imagenNosotros {
+  grid-area: aside;
+  margin-top: 20%;
+}
+#imagenNosotros aside img {
+  padding: 10px;
+}
+
+#organigrama {
+  grid-area: organigrama;
+  display: grid;
+  grid-template-areas: "titulo titulo titulo" "primer primer primer" "segundo segundo segundo";
+  justify-content: center;
+}
+
+#parteSuperior {
+  grid-area: primer;
+  justify-self: center;
+}
+
+#tituloOrganigrama {
+  grid-area: titulo;
+  justify-self: center;
+}
+
+.caja {
+  width: 230px;
+  height: 230px;
+  background-color: grey;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  text-align: center;
+  transition: 0.5s;
+}
+.caja:hover {
+  transform: scale(0.9);
+  box-shadow: 0 0 10px rgb(22, 22, 22);
+}
+
+#divisiones div {
+  grid-area: segundo;
+  display: inline-block;
+}
+
+/*Estilos del body*/
+body {
+  font-family: Arial, sans-serif;
+  background-image: linear-gradient(#0B666A, #97FEED);
+}
+
+section {
+  padding: 20px;
+}
+
+/* MOVIL */
+@media (max-width: 700px) {
+  /* HEADER */
+  /* BODY */
+  #ContenidoPrincipal {
+    grid-template-areas: "carrusel" "noticia" "noticia" "noticia" "aside";
+  }
+  #imagenNosotros {
+    display: none;
+  }
+  #videoBienvenida iframe {
+    display: none;
+  }
+  #divisiones {
+    display: flex;
+    flex-direction: column;
+  }
+  .servicioImagenIzquierda {
+    grid-template-areas: "texto" "aside";
+  }
+  .servicioImagenDerecha {
+    grid-template-areas: "texto" "aside";
+  }
+  .imagenServicio {
+    justify-self: center;
+  }
+  /* FOOTER */
+  footer {
+    display: grid;
+    background-color: #025464;
+    padding: 10px;
+    text-align: center;
+    position: initial;
+    bottom: 0;
+    grid-template-areas: "menu" "mision" "return";
+  }
+  .footer-mision {
+    grid-area: mision;
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */

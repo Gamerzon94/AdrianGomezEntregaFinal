@@ -1,0 +1,85 @@
+@import './utilities/variables';
+@import './base/typo';
+@import './layout/header';
+@import './layout/footer';
+@import './layout/navigation';
+@import './layout/forms';
+@import './views/index';
+@import './views/noticias';
+@import './views/contacto';
+@import './views/servicios';
+@import './views/sobreNosotros';
+
+  /*Estilos del body*/
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(map-get($coloresPrincipales, segundo),map-get($coloresPrincipales, cuarto));
+  }
+
+  section {
+    padding: 20px;
+  }
+  
+  /* MOVIL */
+  
+  @media  (max-width: 700px){
+    /* HEADER */
+
+  
+    /* BODY */
+  
+    #ContenidoPrincipal{
+      grid-template-areas: "carrusel"
+      "noticia"
+      "noticia"
+      "noticia"
+      "aside";
+    }
+    
+    #imagenNosotros{
+      display: none;
+    }
+  
+    #videoBienvenida iframe{
+      display: none;
+    }
+  
+    #divisiones{
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .servicioImagenIzquierda{
+      grid-template-areas: "texto"
+      "aside";
+    }
+  
+    .servicioImagenDerecha{
+      grid-template-areas: "texto"
+      "aside";
+    }
+  
+    .imagenServicio{
+      justify-self: center;
+    }
+  
+    /* FOOTER */
+  
+    footer {
+      display: grid;
+      background-color: #025464;
+      padding: 10px;
+      text-align: center;
+      position: initial;
+      bottom: 0;
+      grid-template-areas: "menu"
+      "mision"
+      "return";
+    }
+  
+    .footer-mision{
+      grid-area: mision;
+      display: none;
+    }
+  }

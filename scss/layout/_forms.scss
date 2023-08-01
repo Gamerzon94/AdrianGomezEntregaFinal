@@ -1,0 +1,25 @@
+/*Estilos de formularios */
+.formularioContacto{
+    display: grid;
+    font-style: normal;
+    font-family: "CaviarDreams";
+    justify-content: center;
+    grid-area: formulario;
+    width: 80%;
+    #formulario{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        #formularioCelda{
+            input{
+                border-radius: 5%;
+            }
+        }
+    }
+    #btnEnviar{
+        text-align: center;
+    }
+}
+
+
+
