@@ -27,15 +27,6 @@
     /* HEADER */
 
   
-    /* BODY */
-  
-    #ContenidoPrincipal{
-      grid-template-areas: "carrusel"
-      "noticia"
-      "noticia"
-      "noticia"
-      "aside";
-    }
     
     #imagenNosotros{
       display: none;
@@ -62,24 +53,5 @@
   
     .imagenServicio{
       justify-self: center;
-    }
-  
-    /* FOOTER */
-  
-    footer {
-      display: grid;
-      background-color: #025464;
-      padding: 10px;
-      text-align: center;
-      position: initial;
-      bottom: 0;
-      grid-template-areas: "menu"
-      "mision"
-      "return";
-    }
-  
-    .footer-mision{
-      grid-area: mision;
-      display: none;
     }
   }

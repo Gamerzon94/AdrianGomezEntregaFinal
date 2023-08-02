@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*varaibles*/ /*Fuentes locales*/
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Geologica:wght@400;700&family=Poppins:wght@200&display=swap");
 @font-face {
@@ -21,21 +22,18 @@ header {
   padding-top: 15px;
 }
 
-.redes-sociales {
+a .redes-sociales {
   display: flex;
   align-items: center;
 }
-
-.redes-sociales a {
+a .redes-sociales a {
   margin-right: 10px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 544px) {
   header {
-    background-color: #071952;
-    padding: 10px;
-    display: grid;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
   }
 }
 /*Estilos del footer*/
@@ -45,39 +43,40 @@ footer {
   padding: 10px;
   text-align: center;
   bottom: 0;
-  grid-template-areas: "menu mision return";
+  grid-template-areas: "menu copyright return";
 }
-
 footer p {
   font-family: "CaviarDreams";
   color: white;
 }
-
 footer a {
   text-decoration: none;
   color: white;
 }
-
-.footer-menu {
+footer .footer-menu {
   grid-area: menu;
   display: flex;
   flex-direction: column;
   font-family: "CaviarDreams";
 }
-
-.footer-mision {
-  grid-area: mision;
+footer .footer-copyright {
+  grid-area: copyright;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.footer-mision p {
-  margin: 5px;
-}
-
-.footer-subir {
+footer .footer-subir {
   grid-area: return;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+@media (max-width: 544px) {
+  footer {
+    grid-template-areas: "menu" "copyright" "return";
+  }
+}
 /*Estilos de la navegacion*/
 nav {
   background-color: #0B666A;
@@ -110,115 +109,127 @@ nav {
 
 /*Estilos del Index*/
 #ContenidoPrincipal {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  width: 70%;
+  margin-left: 15%;
+  grid-template-areas: "carrusel" "contenido";
   justify-content: center;
   align-items: center;
-  text-align: justify;
 }
 #ContenidoPrincipal .contenidoInferior {
-  width: 70%;
+  grid-area: contenido;
+  margin: 30px;
   display: grid;
   grid-template-areas: "noticia aside";
+  align-items: center;
+  justify-content: center;
 }
-#ContenidoPrincipal .contenidoInferior .blog-noticia1 {
+#ContenidoPrincipal .contenidoInferior .contenedor-noticias {
+  grid-area: noticia;
+}
+#ContenidoPrincipal .contenidoInferior .contenedor-noticias .blog-noticia1 {
   margin-bottom: 20px;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #071952), url(../img/fondo.png);
   background-size: cover;
   background-position: center;
   border-radius: 15px;
-  height: 48%;
   font-family: "Cairo";
   display: flex;
+  padding: 20px;
   flex-direction: column;
   justify-content: center;
+  text-align: justify;
   align-items: center;
   transition: transform 0.5s;
 }
-#ContenidoPrincipal .contenidoInferior .blog-noticia1 h2 {
+#ContenidoPrincipal .contenidoInferior .contenedor-noticias .blog-noticia1 h2 {
   color: white;
 }
-#ContenidoPrincipal .contenidoInferior .blog-noticia1 h4 {
+#ContenidoPrincipal .contenidoInferior .contenedor-noticias .blog-noticia1 h4 {
   color: white;
 }
-#ContenidoPrincipal .contenidoInferior .blog-noticia1 p {
+#ContenidoPrincipal .contenidoInferior .contenedor-noticias .blog-noticia1 p {
   color: white;
   margin-left: 5%;
   margin-right: 5%;
 }
-#ContenidoPrincipal .contenidoInferior .blog-noticia1 p a {
+#ContenidoPrincipal .contenidoInferior .contenedor-noticias .blog-noticia1 p a {
   text-decoration: none;
   color: white;
 }
-#ContenidoPrincipal .contenidoInferior .blog-noticia1:hover {
-  transform: scale(1.2);
+#ContenidoPrincipal .contenidoInferior .contenedor-noticias .blog-noticia1:hover {
+  transform: scale(1.05);
   cursor: pointer;
 }
-#ContenidoPrincipal .contenidoInferior .blog-noticia2 {
+#ContenidoPrincipal .contenidoInferior .contenedor-noticias .blog-noticia2 {
   margin-bottom: 20px;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #071952), url(../img/servicio2.png);
   background-size: cover;
   background-position: center;
   border-radius: 15px;
-  height: 48%;
   font-family: "Cairo";
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: justify;
   transition: transform 0.5s;
+  padding: 20px;
 }
-#ContenidoPrincipal .contenidoInferior .blog-noticia2 h2 {
+#ContenidoPrincipal .contenidoInferior .contenedor-noticias .blog-noticia2 h2 {
   color: white;
 }
-#ContenidoPrincipal .contenidoInferior .blog-noticia2 h4 {
+#ContenidoPrincipal .contenidoInferior .contenedor-noticias .blog-noticia2 h4 {
   color: white;
 }
-#ContenidoPrincipal .contenidoInferior .blog-noticia2 p {
+#ContenidoPrincipal .contenidoInferior .contenedor-noticias .blog-noticia2 p {
   color: white;
   margin-left: 5%;
   margin-right: 5%;
 }
-#ContenidoPrincipal .contenidoInferior .blog-noticia2 p a {
+#ContenidoPrincipal .contenidoInferior .contenedor-noticias .blog-noticia2 p a {
   text-decoration: none;
   color: white;
 }
-#ContenidoPrincipal .contenidoInferior .blog-noticia2:hover {
-  transform: scale(1.2);
+#ContenidoPrincipal .contenidoInferior .contenedor-noticias .blog-noticia2:hover {
+  transform: scale(1.05);
   cursor: pointer;
 }
-#ContenidoPrincipal #resumenNoticias {
+#ContenidoPrincipal .contenidoInferior #resumenNoticias {
   grid-area: aside;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #071952), url(../img/personal.png);
   background-size: cover;
   background-position: center;
   border-radius: 15px;
-  padding-left: 15px;
+  padding: 20px;
   margin-left: 15px;
+  margin-bottom: 15px;
   font-family: "Cairo";
+  height: 98%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: justify;
   align-items: center;
   transition: transform 0.5s;
 }
-#ContenidoPrincipal #resumenNoticias h2 {
+#ContenidoPrincipal .contenidoInferior #resumenNoticias h2 {
   color: white;
 }
-#ContenidoPrincipal #resumenNoticias h4 {
+#ContenidoPrincipal .contenidoInferior #resumenNoticias h4 {
   color: white;
 }
-#ContenidoPrincipal #resumenNoticias p {
+#ContenidoPrincipal .contenidoInferior #resumenNoticias p {
   color: white;
   margin-left: 5%;
   margin-right: 5%;
 }
-#ContenidoPrincipal #resumenNoticias p a {
+#ContenidoPrincipal .contenidoInferior #resumenNoticias p a {
   text-decoration: none;
   color: white;
 }
-#ContenidoPrincipal #resumenNoticias:hover {
-  transform: scale(1.2);
+#ContenidoPrincipal .contenidoInferior #resumenNoticias:hover {
+  transform: scale(1.05);
   cursor: pointer;
 }
 
@@ -228,30 +239,35 @@ nav {
   margin: 30px;
   grid-area: carrusel;
 }
-
-#carouselExampleCaptions {
-  width: 40%;
+#Carrusel #carouselExampleCaptions ¿ .carousel-item img {
+  max-height: 100%; /* Asegura que las imágenes no excedan la altura del contenedor */
+  margin: 0 auto; /* Centra horizontalmente las imágenes */
 }
-#carouselExampleCaptions h5 {
+#Carrusel #carouselExampleCaptions h5 {
   color: black;
   font-weight: bold;
   font-family: Geologica;
 }
-#carouselExampleCaptions p {
+#Carrusel #carouselExampleCaptions p {
   color: black;
   font-weight: bold;
   font-family: Geologica;
 }
 
-#imagen {
-  text-align: center;
-  margin-bottom: 20px;
+@media (max-width: 544px) {
+  #ContenidoPrincipal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+  }
+  #ContenidoPrincipal .contenidoInferior {
+    width: 70%;
+    display: grid;
+    grid-template-areas: "noticia" "aside";
+  }
 }
-
-.contenedor-noticia {
-  grid-area: noticia;
-}
-
 /*Estilos de la pagina de noticia*/
 .contenidoNoticias {
   display: flex;
@@ -505,10 +521,6 @@ section {
 /* MOVIL */
 @media (max-width: 700px) {
   /* HEADER */
-  /* BODY */
-  #ContenidoPrincipal {
-    grid-template-areas: "carrusel" "noticia" "noticia" "noticia" "aside";
-  }
   #imagenNosotros {
     display: none;
   }
@@ -527,20 +539,6 @@ section {
   }
   .imagenServicio {
     justify-self: center;
-  }
-  /* FOOTER */
-  footer {
-    display: grid;
-    background-color: #025464;
-    padding: 10px;
-    text-align: center;
-    position: initial;
-    bottom: 0;
-    grid-template-areas: "menu" "mision" "return";
-  }
-  .footer-mision {
-    grid-area: mision;
-    display: none;
   }
 }
 
