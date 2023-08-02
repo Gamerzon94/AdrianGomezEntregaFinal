@@ -22,11 +22,11 @@ header {
   padding-top: 15px;
 }
 
-a .redes-sociales {
+.redes-sociales {
   display: flex;
   align-items: center;
 }
-a .redes-sociales a {
+.redes-sociales a {
   margin-right: 10px;
 }
 
@@ -461,6 +461,9 @@ nav {
   display: flex;
   justify-content: center;
   margin: 30px;
+}
+#videoBienvenida #fluid_video_wrapper_example-player {
+  height: 50%;
 }
 
 #imagenNosotros {
