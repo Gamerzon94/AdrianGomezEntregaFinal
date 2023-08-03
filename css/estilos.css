@@ -1,5 +1,4 @@
-@charset "UTF-8";
-/*varaibles*/ /*Fuentes locales*/
+/*Imports*/ /*varaibles*/ /*Fuentes locales*/
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Geologica:wght@400;700&family=Poppins:wght@200&display=swap");
 @font-face {
   font-family: "CaviarDreams";
@@ -14,19 +13,17 @@ header {
   justify-content: space-between;
   color: white;
 }
-
-#titulo {
+header #titulo {
   font-size: 30px;
   margin: 10px;
   font-weight: bold;
   padding-top: 15px;
 }
-
-.redes-sociales {
+header .redes-sociales {
   display: flex;
   align-items: center;
 }
-.redes-sociales a {
+header .redes-sociales a {
   margin-right: 10px;
 }
 
@@ -79,7 +76,7 @@ footer .footer-subir {
 }
 /*Estilos de la navegacion*/
 nav {
-  background-color: #0B666A;
+  background-color: #0b666a;
 }
 
 #navbarSupportedContent ul li a {
@@ -102,8 +99,8 @@ nav {
 }
 .formularioContacto #formulario #botones input {
   margin: 10px;
-  background-color: #35A29F;
-  border: #35A29F;
+  background-color: #35a29f;
+  border: #35a29f;
 }
 .formularioContacto #btnEnviar {
   text-align: center;
@@ -241,9 +238,12 @@ nav {
   margin: 30px;
   grid-area: carrusel;
 }
-#Carrusel #carouselExampleCaptions ¿ .carousel-item img {
-  max-height: 100%; /* Asegura que las imágenes no excedan la altura del contenedor */
-  margin: 0 auto; /* Centra horizontalmente las imágenes */
+#Carrusel #carouselExampleCaptions .carousel-item img {
+  max-height: 100%;
+  margin: 0 auto;
+}
+#Carrusel #carouselExampleCaptions .carousel-caption {
+  background-color: rgba(255, 255, 255, 0.6);
 }
 #Carrusel #carouselExampleCaptions h5 {
   color: black;
@@ -590,10 +590,10 @@ nav {
     flex-direction: column;
   }
 }
-/*Estilos del body*/
+/*Estilos del body para todas las paginas*/
 body {
   font-family: Arial, sans-serif;
-  background-image: linear-gradient(#0B666A, #97FEED);
+  background-image: linear-gradient(#0b666a, #97feed);
 }
 
 section {

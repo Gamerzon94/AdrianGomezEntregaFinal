@@ -1,27 +1,24 @@
 /*Estilos de formularios */
-.formularioContacto{
-    font-style: normal;
-    font-family: "CaviarDreams";
-    #formulario{
-        #botones{
-            display: flex;
-            justify-content: center;
-            button{
-                margin: 10px;
-                background-color: map-get($coloresPrincipales, primero);
-                border: map-get($coloresPrincipales, primero);
-            }
-            input{
-                margin: 10px;
-                background-color: map-get($coloresPrincipales, tercero);
-                border: map-get($coloresPrincipales, tercero);
-            }
-        }
+.formularioContacto {
+  font-style: normal;
+  font-family: "CaviarDreams";
+  #formulario {
+    #botones {
+      display: flex;
+      justify-content: center;
+      button {
+        margin: 10px;
+        background-color: map-get($coloresPrincipales, primero);
+        border: map-get($coloresPrincipales, primero);
+      }
+      input {
+        margin: 10px;
+        background-color: map-get($coloresPrincipales, tercero);
+        border: map-get($coloresPrincipales, tercero);
+      }
     }
-    #btnEnviar{
-        text-align: center;
-    }
+  }
+  #btnEnviar {
+    text-align: center;
+  }
 }
-
-
-
