@@ -20,25 +20,3 @@
   section {
     padding: 20px;
   }
-  
-  /* MOVIL */
-  
-  @media  (max-width: 700px){
-    /* HEADER */
-  
-
-  
-    .servicioImagenIzquierda{
-      grid-template-areas: "texto"
-      "aside";
-    }
-  
-    .servicioImagenDerecha{
-      grid-template-areas: "texto"
-      "aside";
-    }
-  
-    .imagenServicio{
-      justify-self: center;
-    }
-  }

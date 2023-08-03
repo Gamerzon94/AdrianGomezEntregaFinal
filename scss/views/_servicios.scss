@@ -1,10 +1,22 @@
 /*Estilos de la pagina de servicios*/
 
     #cuerpoServicios{
-        display: flex;
-        flex-direction: column;
-        margin: 10px;
+        display: grid;
+        width: 70%;
+        margin-left: 15%;
+        grid-template-areas: "servicio1" "servicio2" "servicio3";
+        justify-content: center;
+        align-items: center;
         text-align: justify;
+        #servicio1{
+            grid-area: servicio1;
+        }
+        #servicio2{
+            grid-area: servicio2;
+        }
+        #servicio3{
+            grid-area: servicio3;
+        }
         .servicioImagenIzquierda{
             padding: 20px;
             display: grid;
@@ -14,9 +26,22 @@
             color: white;
             margin: 10px;
             aside{
+                grid-area: aside;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                img{
+                    padding: 10px;
+                    max-width: 100%;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .contenidoServicio{
+                grid-area: texto;
+                padding: 20px;
+                grid-area: texto;
+                font-family: 'Cairo';
             }
         }
         .servicioImagenDerecha{
@@ -28,28 +53,33 @@
             color: white;
             margin: 10px;
             aside{
+                grid-area: aside;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                img{
+                    padding: 10px;
+                    max-width: 100%;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .contenidoServicio{
+                grid-area: texto;
+                padding: 20px;
+                grid-area: texto;
+                font-family: 'Cairo';
             }
         }
     }
 
-
-
-    
-
-    .contenidoServicio{
-        padding: 20px;
-        grid-area: texto;
-        font-family: 'Cairo';
-    }
-
-    .imagenServicio{
-        grid-area: aside;
-    }
-
-    #contenidoNoticias{
-        display: flex;
-        flex-direction: column;
+    @media (max-width: 544px){
+        #cuerpoServicios{
+            .servicioImagenIzquierda{
+                grid-template-areas: "aside" "texto";
+            }
+            .servicioImagenDerecha{
+                grid-template-areas: "aside" "texto";
+            }
+        }
     }

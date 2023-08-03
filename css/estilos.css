@@ -377,10 +377,22 @@ nav {
 }
 /*Estilos de la pagina de servicios*/
 #cuerpoServicios {
-  display: flex;
-  flex-direction: column;
-  margin: 10px;
+  display: grid;
+  width: 70%;
+  margin-left: 15%;
+  grid-template-areas: "servicio1" "servicio2" "servicio3";
+  justify-content: center;
+  align-items: center;
   text-align: justify;
+}
+#cuerpoServicios #servicio1 {
+  grid-area: servicio1;
+}
+#cuerpoServicios #servicio2 {
+  grid-area: servicio2;
+}
+#cuerpoServicios #servicio3 {
+  grid-area: servicio3;
 }
 #cuerpoServicios .servicioImagenIzquierda {
   padding: 20px;
@@ -392,9 +404,22 @@ nav {
   margin: 10px;
 }
 #cuerpoServicios .servicioImagenIzquierda aside {
+  grid-area: aside;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+#cuerpoServicios .servicioImagenIzquierda aside img {
+  padding: 10px;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+#cuerpoServicios .servicioImagenIzquierda .contenidoServicio {
+  grid-area: texto;
+  padding: 20px;
+  grid-area: texto;
+  font-family: "Cairo";
 }
 #cuerpoServicios .servicioImagenDerecha {
   padding: 20px;
@@ -406,26 +431,32 @@ nav {
   margin: 10px;
 }
 #cuerpoServicios .servicioImagenDerecha aside {
+  grid-area: aside;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.contenidoServicio {
+#cuerpoServicios .servicioImagenDerecha aside img {
+  padding: 10px;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+#cuerpoServicios .servicioImagenDerecha .contenidoServicio {
+  grid-area: texto;
   padding: 20px;
   grid-area: texto;
   font-family: "Cairo";
 }
 
-.imagenServicio {
-  grid-area: aside;
+@media (max-width: 544px) {
+  #cuerpoServicios .servicioImagenIzquierda {
+    grid-template-areas: "aside" "texto";
+  }
+  #cuerpoServicios .servicioImagenDerecha {
+    grid-template-areas: "aside" "texto";
+  }
 }
-
-#contenidoNoticias {
-  display: flex;
-  flex-direction: column;
-}
-
 /*Estilos de la pagina Sobre Nosotros*/
 #contenidoSobreNosotros {
   display: grid;
@@ -532,20 +563,6 @@ body {
 
 section {
   padding: 20px;
-}
-
-/* MOVIL */
-@media (max-width: 700px) {
-  /* HEADER */
-  .servicioImagenIzquierda {
-    grid-template-areas: "texto" "aside";
-  }
-  .servicioImagenDerecha {
-    grid-template-areas: "texto" "aside";
-  }
-  .imagenServicio {
-    justify-self: center;
-  }
 }
 
 /*# sourceMappingURL=estilos.css.map */
