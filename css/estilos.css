@@ -88,20 +88,22 @@ nav {
 
 /*Estilos de formularios */
 .formularioContacto {
-  display: grid;
   font-style: normal;
   font-family: "CaviarDreams";
-  justify-content: center;
-  grid-area: formulario;
-  width: 80%;
 }
-.formularioContacto #formulario {
+.formularioContacto #formulario #botones {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
 }
-.formularioContacto #formulario #formularioCelda input {
-  border-radius: 5%;
+.formularioContacto #formulario #botones button {
+  margin: 10px;
+  background-color: #071952;
+  border: #071952;
+}
+.formularioContacto #formulario #botones input {
+  margin: 10px;
+  background-color: #35A29F;
+  border: #35A29F;
 }
 .formularioContacto #btnEnviar {
   text-align: center;
@@ -377,13 +379,24 @@ nav {
 /*Estilos de la pagina de contacto*/
 .contactoContenido {
   display: grid;
-  justify-content: center;
+  width: 70%;
+  margin-left: 15%;
   grid-template-areas: "imagen formulario";
-  grid-template-columns: 1fr 2fr;
+  justify-content: center;
+  align-items: center;
 }
 .contactoContenido .imagenContacto {
   grid-area: imagen;
-  margin-top: 10%;
+  padding: 30px;
+}
+.contactoContenido .imagenContacto img {
+  padding: 10px;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+.contactoContenido .formularioContacto {
+  grid-area: formulario;
 }
 .contactoContenido #tituloContacto {
   color: white;
@@ -392,13 +405,9 @@ nav {
   font-family: "CaviarDreams";
 }
 
-@media (max-width: 700px) {
+@media (max-width: 544px) {
   .contactoContenido {
-    grid-template-areas: "formulario";
-    margin-left: 30%;
-  }
-  .contactoContenido .imagenContacto {
-    display: none;
+    grid-template-areas: "formulario" "imagen";
   }
 }
 /*Estilos de la pagina de servicios*/

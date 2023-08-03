@@ -1,18 +1,20 @@
 /*Estilos de formularios */
 .formularioContacto{
-    display: grid;
     font-style: normal;
     font-family: "CaviarDreams";
-    justify-content: center;
-    grid-area: formulario;
-    width: 80%;
     #formulario{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        #formularioCelda{
+        #botones{
+            display: flex;
+            justify-content: center;
+            button{
+                margin: 10px;
+                background-color: map-get($coloresPrincipales, primero);
+                border: map-get($coloresPrincipales, primero);
+            }
             input{
-                border-radius: 5%;
+                margin: 10px;
+                background-color: map-get($coloresPrincipales, tercero);
+                border: map-get($coloresPrincipales, tercero);
             }
         }
     }
