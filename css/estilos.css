@@ -484,7 +484,7 @@ nav {
 #contenidoSobreNosotros #sobreNosotros #organigrama {
   grid-area: organigrama;
   display: grid;
-  margin: 30px;
+  margin: 0 30px 30px 30px;
   grid-template-areas: "titulo titulo titulo" "primer primer primer" "segundo segundo segundo";
   justify-content: center;
 }
