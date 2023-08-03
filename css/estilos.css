@@ -429,69 +429,78 @@ nav {
 /*Estilos de la pagina Sobre Nosotros*/
 #contenidoSobreNosotros {
   display: grid;
-  grid-area: contenido;
+  width: 70%;
+  margin-left: 15%;
+  grid-template-areas: "video" "contenido";
+  justify-content: center;
+  align-items: center;
 }
 #contenidoSobreNosotros p {
   font-family: "Cairo";
 }
-
-#sobreNosotros {
-  background-color: rgb(65, 65, 65);
-  border-radius: 10px;
-  display: grid;
-  grid-template-areas: "contenido aside" "organigrama organigrama";
-  margin: 30px;
-  text-align: justify;
-}
-#sobreNosotros aside {
-  background-color: transparent;
-}
-#sobreNosotros h2 {
-  margin: 10px;
-  color: white;
-  font: bold;
-}
-#sobreNosotros p {
-  margin-left: 10px;
-  margin-right: 10px;
-  color: white;
-}
-
-#videoBienvenida {
+#contenidoSobreNosotros #videoBienvenida {
+  grid-area: video;
   display: flex;
   justify-content: center;
   margin: 30px;
 }
-#videoBienvenida #fluid_video_wrapper_example-player {
-  height: 50%;
-}
-
-#imagenNosotros {
-  grid-area: aside;
-  margin-top: 20%;
-}
-#imagenNosotros aside img {
-  padding: 10px;
-}
-
-#organigrama {
-  grid-area: organigrama;
+#contenidoSobreNosotros #sobreNosotros {
+  grid-area: contenido;
+  background-color: rgb(65, 65, 65);
+  border-radius: 10px;
   display: grid;
-  grid-template-areas: "titulo titulo titulo" "primer primer primer" "segundo segundo segundo";
-  justify-content: center;
+  grid-template-areas: "titulo titulo" "descripcion aside" "organigrama organigrama";
+  margin: 30px;
+  text-align: justify;
 }
-
-#parteSuperior {
-  grid-area: primer;
-  justify-self: center;
+#contenidoSobreNosotros #sobreNosotros h2 {
+  margin: 10px;
+  color: white;
+  font: bold;
 }
-
-#tituloOrganigrama {
+#contenidoSobreNosotros #sobreNosotros p {
+  color: white;
+}
+#contenidoSobreNosotros #sobreNosotros #tituloSobreNostros {
   grid-area: titulo;
   justify-self: center;
 }
-
-.caja {
+#contenidoSobreNosotros #sobreNosotros #descripcionSobreNostros {
+  grid-area: descripcion;
+  margin: 20px;
+}
+#contenidoSobreNosotros #sobreNosotros #imagenNosotros {
+  background-color: transparent;
+  margin: 10px;
+  grid-area: aside;
+  margin-top: 20%;
+}
+#contenidoSobreNosotros #sobreNosotros #imagenNosotros img {
+  padding: 10px;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+#contenidoSobreNosotros #sobreNosotros #organigrama {
+  grid-area: organigrama;
+  display: grid;
+  margin: 30px;
+  grid-template-areas: "titulo titulo titulo" "primer primer primer" "segundo segundo segundo";
+  justify-content: center;
+}
+#contenidoSobreNosotros #sobreNosotros #organigrama #tituloOrganigrama {
+  grid-area: titulo;
+  justify-self: center;
+}
+#contenidoSobreNosotros #sobreNosotros #parteSuperior {
+  grid-area: primer;
+  justify-self: center;
+}
+#contenidoSobreNosotros #sobreNosotros #divisiones div {
+  grid-area: segundo;
+  display: inline-block;
+}
+#contenidoSobreNosotros #sobreNosotros .caja {
   width: 230px;
   height: 230px;
   background-color: grey;
@@ -501,16 +510,20 @@ nav {
   text-align: center;
   transition: 0.5s;
 }
-.caja:hover {
+#contenidoSobreNosotros #sobreNosotros .caja:hover {
   transform: scale(0.9);
   box-shadow: 0 0 10px rgb(22, 22, 22);
 }
 
-#divisiones div {
-  grid-area: segundo;
-  display: inline-block;
+@media (max-width: 544px) {
+  #contenidoSobreNosotros #sobreNosotros {
+    grid-template-areas: "titulo" "aside" "descripcion" "organigrama";
+  }
+  #divisiones {
+    display: flex;
+    flex-direction: column;
+  }
 }
-
 /*Estilos del body*/
 body {
   font-family: Arial, sans-serif;
@@ -524,16 +537,6 @@ section {
 /* MOVIL */
 @media (max-width: 700px) {
   /* HEADER */
-  #imagenNosotros {
-    display: none;
-  }
-  #videoBienvenida iframe {
-    display: none;
-  }
-  #divisiones {
-    display: flex;
-    flex-direction: column;
-  }
   .servicioImagenIzquierda {
     grid-template-areas: "texto" "aside";
   }

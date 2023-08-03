@@ -2,94 +2,105 @@
 
     #contenidoSobreNosotros{
         display: grid;
-        grid-area: contenido;
+        width: 70%;
+        margin-left: 15%;
+        grid-template-areas: "video" "contenido";
+        justify-content: center;
+        align-items: center;
         p{
             font-family: 'Cairo';
         }
-    }
-
-    #sobreNosotros{
-        background-color: rgb(65, 65, 65);
-        border-radius: 10px;
-        display: grid;
-        grid-template-areas: "contenido aside"
-        "organigrama organigrama";
-        margin: 30px;
-        text-align: justify;
-        aside{
-            background-color: transparent;
+        #videoBienvenida{
+            grid-area: video;
+            display: flex;
+            justify-content: center;
+            margin: 30px;
         }
-        h2{
-            margin: 10px;
-            color: white;
-            font:bold;
-        }
-        p{
-            margin-left: 10px;
-            margin-right: 10px;
-            color: white;
-        }
-    }
-
-    #videoBienvenida{
-        display: flex;
-        justify-content: center;
-        margin: 30px;
-        #fluid_video_wrapper_example-player{
-            height: 50%;
-        }
-    }
-
-    
-
-    #imagenNosotros{
-        grid-area: aside;
-        margin-top: 20%;
-        aside{
-            img{
+        #sobreNosotros{
+            grid-area: contenido;
+            background-color: rgb(65, 65, 65);
+            border-radius: 10px;
+            display: grid;
+            grid-template-areas: "titulo titulo" "descripcion aside" "organigrama organigrama";
+            margin: 30px;
+            text-align: justify;
+            h2{
+                margin: 10px;
+                color: white;
+                font:bold;
+            }
+            p{
+                color: white;
+            }
+            #tituloSobreNostros{
+                grid-area: titulo;
+                justify-self: center;
+            }
+            #descripcionSobreNostros{
+                grid-area: descripcion;
+                margin: 20px;
+            }
+            #imagenNosotros{
+                background-color: transparent;
+                margin: 10px;
+                grid-area: aside;
+                margin-top: 20%;
+                    img{
+                        padding: 10px;
+                        max-width: 100%;
+                        width: 100%;
+                        height: auto;
+                    }
+            }
+            #organigrama{
+                grid-area: organigrama;
+                display: grid;
+                margin: 30px;
+                grid-template-areas: 
+                "titulo titulo titulo"
+                "primer primer primer"
+                "segundo segundo segundo";
+                justify-content: center;
+                #tituloOrganigrama{
+                    grid-area: titulo;
+                    justify-self: center;
+                }
+            }
+            #parteSuperior{
+                grid-area: primer;
+                justify-self: center;
+            }
+            #divisiones {
+                div{
+                grid-area: segundo;
+                display: inline-block;
+                }
+            }
+            .caja{
+                width: 230px;
+                height: 230px;
+                background-color: grey;
                 padding: 10px;
+                border-radius: 10px;
+                margin: 10px;
+                text-align: center;
+                transition: .5s;
+                &:hover{
+                    transform: scale(0.9);
+                    box-shadow: 0 0 10px rgb(22, 22, 22);
+                }
             }
         }
     }
 
-    #organigrama{
-        grid-area: organigrama;
-        display: grid;
-        grid-template-areas: 
-        "titulo titulo titulo"
-        "primer primer primer"
-        "segundo segundo segundo";
-        justify-content: center;
-    }
-
-    #parteSuperior{
-        grid-area: primer;
-        justify-self: center;
-    }
-
-    #tituloOrganigrama{
-        grid-area: titulo;
-        justify-self: center;
-    }
-
-    .caja{
-        width: 230px;
-        height: 230px;
-        background-color: grey;
-        padding: 10px;
-        border-radius: 10px;
-        margin: 10px;
-        text-align: center;
-        transition: .5s;
-        &:hover{
-            transform: scale(0.9);
-            box-shadow: 0 0 10px rgb(22, 22, 22);
+    @media (max-width: 544px){
+        #contenidoSobreNosotros{
+            #sobreNosotros{
+                grid-template-areas: "titulo" "aside" "descripcion"  "organigrama";
+            }
         }
-    }
-    
-    #divisiones {
-            div{
-            grid-area: segundo;
-            display: inline-block;
+        #divisiones{
+            display: flex;
+            flex-direction: column;
         }
     }

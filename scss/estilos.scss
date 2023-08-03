@@ -25,21 +25,8 @@
   
   @media  (max-width: 700px){
     /* HEADER */
+  
 
-  
-    
-    #imagenNosotros{
-      display: none;
-    }
-  
-    #videoBienvenida iframe{
-      display: none;
-    }
-  
-    #divisiones{
-      display: flex;
-      flex-direction: column;
-    }
   
     .servicioImagenIzquierda{
       grid-template-areas: "texto"
