@@ -270,9 +270,11 @@ nav {
 }
 /*Estilos de la pagina de noticia*/
 .contenidoNoticias {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  width: 70%;
+  margin-left: 15%;
   justify-content: center;
+  align-items: center;
 }
 .contenidoNoticias .contenedorNoticias {
   width: 100%;
@@ -289,10 +291,11 @@ nav {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  background-image: linear-gradient(#071952, #0d2a88);
   flex-direction: column;
   margin: 10px;
   transition: transform 0.5s;
+  text-align: justify;
+  padding: 10px;
 }
 .contenidoNoticias .contenedorNoticias .noticia h2 {
   font-family: "Franklin Gothic Medium";
@@ -307,8 +310,38 @@ nav {
   color: white;
 }
 .contenidoNoticias .contenedorNoticias .noticia:hover {
-  transform: scale(1.2);
+  transform: scale(1.05);
   cursor: pointer;
+}
+.contenidoNoticias .contenedorNoticias #noticia1 {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #071952), url(../img/Recuerdennos.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.contenidoNoticias .contenedorNoticias #noticia2 {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #071952), url(../img/brechacontencion.png);
+  background-size: cover;
+  background-position: center;
+}
+.contenidoNoticias .contenedorNoticias #noticia3 {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #071952), url(../img/administrador.png);
+  background-size: cover;
+  background-position: center;
+}
+.contenidoNoticias .contenedorNoticias #noticia4 {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #071952), url(../img/fiesta.png);
+  background-size: cover;
+  background-position: center;
+}
+.contenidoNoticias .contenedorNoticias #noticia5 {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #071952), url(../img/mani.png);
+  background-size: cover;
+  background-position: center;
+}
+.contenidoNoticias .contenedorNoticias #noticia6 {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #071952), url(../img/puesto.png);
+  background-size: cover;
+  background-position: center;
 }
 .contenidoNoticias #paginasNoticias {
   display: grid;
@@ -339,13 +372,6 @@ nav {
 @media screen and (max-width: 700px) {
   .contenidoNoticias .contenedorNoticias {
     grid-template-columns: 1fr;
-  }
-  .contenidoNoticias ul.pagination {
-    flex-direction: column;
-  }
-  .contenidoNoticias li.page-item {
-    margin: 10px 0;
-    text-align: center;
   }
 }
 /*Estilos de la pagina de contacto*/

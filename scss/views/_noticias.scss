@@ -1,9 +1,11 @@
 /*Estilos de la pagina de noticia*/
 
     .contenidoNoticias{
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        width: 70%;
+        margin-left: 15%;
         justify-content: center;
+        align-items: center;
         .contenedorNoticias{
             width: 100%;
             display: grid;
@@ -18,10 +20,11 @@
                 align-items: center;
                 justify-content: center;
                 padding: 10px;
-                background-image: linear-gradient(map-get($coloresPrincipales, primero),map-get($coloresPrincipales, quinto));
                 flex-direction: column;
                 margin: 10px;
                 transition: transform 0.5s;
+                text-align: justify;
+                padding: 10px;
                 h2{
                     font-family: 'Franklin Gothic Medium';
                     color:$colorTituloNoticia;
@@ -34,9 +37,39 @@
                     font-family: 'Poppins';
                     color:$colorContenidoNoticia;
                 }&:hover{
-                    transform: scale(1.2);
+                    transform: scale(1.05);
                     cursor: pointer;
                 }
+            }
+            #noticia1{
+                background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), map-get($coloresPrincipales, primero)),url(../img/Recuerdennos.jpg);
+                background-size: cover;
+                background-position: center;
+            }
+            #noticia2{
+                background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), map-get($coloresPrincipales, primero)),url(../img/brechacontencion.png);
+                background-size: cover;
+                background-position: center;
+            }
+            #noticia3{
+                background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), map-get($coloresPrincipales, primero)),url(../img/administrador.png);
+                background-size: cover;
+                background-position: center;
+            }
+            #noticia4{
+                background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), map-get($coloresPrincipales, primero)),url(../img/fiesta.png);
+                background-size: cover;
+                background-position: center;
+            }
+            #noticia5{
+                background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), map-get($coloresPrincipales, primero)),url(../img/mani.png);
+                background-size: cover;
+                background-position: center;
+            }
+            #noticia6{
+                background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), map-get($coloresPrincipales, primero)),url(../img/puesto.png);
+                background-size: cover;
+                background-position: center;
             }
         }
         #paginasNoticias{
@@ -74,13 +107,6 @@
         .contenidoNoticias{
             .contenedorNoticias {
                 grid-template-columns: 1fr; 
-            }
-            ul.pagination {
-                flex-direction: column;
-            }
-            li.page-item {
-                margin: 10px 0;
-                text-align: center;
             }
         }
     }
